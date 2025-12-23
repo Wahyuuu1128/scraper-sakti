@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, send_file
 from google_play_scraper import reviews, Sort
 import pandas as pd
 import re 
-import os # Wajib ada buat ngecek file sebelum download
+import os 
 
 app = Flask(__name__)
 
@@ -72,4 +72,5 @@ def download_csv():
     return "Belum ada data untuk didownload. Silakan scrape dulu."
 
 if __name__ == '__main__':
+
     app.run(debug=True)
